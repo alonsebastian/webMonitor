@@ -1,14 +1,11 @@
 import time, os
 from urllib2 import urlopen
 import conf
+from ping import *
 
 content = ""
 while True:
-    ping_route = "ping -c 1 -W 2 " + conf.route + ' | grep "packet loss"'
-    #ping -c 1 = count 1, -W 2 = timeout 2 seconds
-    print ping_route
-
-    result = os.popen(ping_route).read()
+    result = ping(conf.route)
     try:
         content = urlopen(conf.message_url).read()
     except urllib2.HTTPError:
