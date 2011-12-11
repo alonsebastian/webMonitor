@@ -1,0 +1,3 @@
+Simple weekend project for offline web service monitoring.
+I believe that we should be able to go out with friends relying on ways to know when things stop working.
+In addition, I'll give the user the chance to set a last message from the server to give an idea of problems before shutting down (network traffic, cpu usage, etc).
